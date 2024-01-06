@@ -6,6 +6,9 @@ The goal of this project is to set up a complete CI/CD pipeline for deploying a 
 
 1. Virtual Private Cloud (VPC)
     - Create a custom VPC with private and public subnets.
+    - Create S3 bucket
+    - Create an S3 backend to store `.tfstate` file
+    - Create a DynamoDB for locking the state file, this is usefull when we have many developers woroking on the same state file. Chaos is what we need to minimize here
 2. Route53
     - Configure a Route53 hosted zone for DNS management.
 3. Elastic Container Service (ECS)
